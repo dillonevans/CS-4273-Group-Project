@@ -4,5 +4,6 @@ namespace AbstractSyntaxTrees
 {
     public abstract class ExpressionTreeNode
     {
+        
     }
 }
