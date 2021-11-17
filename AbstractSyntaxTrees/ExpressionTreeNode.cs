@@ -2,7 +2,7 @@
 
 namespace AbstractSyntaxTrees
 {
-    public abstract class ExpressionTreeNode
+    public abstract class ExpressionTreeNode 
     {
         
     }
