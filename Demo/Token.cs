@@ -8,6 +8,8 @@ namespace Calculator
         Add,
         Divide,
         Subtract,
+        Undefined,
+        EOF
     }
     public class Token
     {
