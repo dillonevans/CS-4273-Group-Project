@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{152A22D6-435C-4CE2-87DE-138F42F885AD}"
-	ProjectSection(SolutionItems) = preProject
-		Token.cs = Token.cs
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractSyntaxTrees", "AbstractSyntaxTrees\AbstractSyntaxTrees.csproj", "{32EA15F2-B2ED-4578-A9EB-4CD137D02B0B}"
 EndProject
