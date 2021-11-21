@@ -19,5 +19,22 @@ namespace AbstractSyntaxTrees
             Right = right;
             Operator = binaryOperator;
         }
+
+        public override double Evaluate()
+        {
+            switch (Operator)
+            {
+                case BinaryOperator.Muliply:
+                    return Left.Evaluate() * Right.Evaluate();
+                case BinaryOperator.Add:
+                    return Left.Evaluate() + Right.Evaluate();
+                case BinaryOperator.Divide:
+                    return Left.Evaluate() / Right.Evaluate();
+                case BinaryOperator.Subtract:
+                    return Left.Evaluate() - Right.Evaluate();
+                default:
+                    return 1;
+            }
+        }
     }
 }
