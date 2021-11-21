@@ -1,7 +1,6 @@
 ﻿using System;
-using Calculator;
 
-namespace Demo
+namespace Lexing
 {
     public class Lexer
     {
@@ -12,7 +11,13 @@ namespace Demo
             this.input = input;
         }
 
-        public Char GetCurrent()
+        public bool HasReachedEOF()
+        {
+            return position > input.Length;
+        }
+
+
+        public char GetCurrent()
         {
             if (position < input.Length)
             {
@@ -32,7 +37,7 @@ namespace Demo
         public Token Spit()
         {
 
-            string Lexeme;
+            string lexeme;
             int start = position;
             if (char.IsDigit(GetCurrent()))
             {
@@ -40,8 +45,8 @@ namespace Demo
                 {
                     Push();
                 }
-                Lexeme = input[start..position];
-                return new Token(Lexeme, TokenType.Digit);
+                lexeme = input[start..position];
+                return new Token(lexeme, TokenType.Digit);
             }
             else
             {

@@ -1,5 +1,6 @@
 ﻿using System;
-namespace Calculator
+
+namespace Lexing
 {
     public enum TokenType {
         //tokens for inputs int the calc.
