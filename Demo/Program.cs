@@ -1,8 +1,9 @@
 ﻿using AbstractSyntaxTrees;
-using Demo;
+using Lexing;
+using Parsing;
 using System;
 
-namespace Calculator
+namespace Demo
 {
     class Program
     {
@@ -13,15 +14,18 @@ namespace Calculator
             //var right = new ConstantNode(3);
             //var operatorNode = new BinaryExpressionNode(left, BinaryOperator.Add, right);
 
-            var test1 = new Lexer("100/200");
-            var token = test1.Spit();
-
-            Console.WriteLine(token.Text);
-            token = test1.Spit();
-            Console.WriteLine(token.Text);
-            token = test1.Spit();
-            Console.WriteLine(token.Text);
-            //Console.WriteLine(operatorNode.Evaluate());
+            try
+            {
+                var test1 = new Lexer("1+");
+                var parser = new Parser(test1);
+                var tree = parser.ParseBinaryExpression(0);
+                Console.WriteLine(tree.Evaluate());
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
