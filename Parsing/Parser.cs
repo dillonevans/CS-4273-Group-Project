@@ -3,6 +3,7 @@ using Lexing;
 using AbstractSyntaxTrees;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Parsing
 {
@@ -42,6 +43,7 @@ namespace Parsing
             var current = GetCurrentToken();
             double value;
 
+            Debug.WriteLine($"Current type is {current.Type}");
             switch(current.Type)
             {
                 case TokenType.Digit:

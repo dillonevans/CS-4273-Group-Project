@@ -1,6 +1,4 @@
-﻿using AbstractSyntaxTrees;
-using Lexing;
-using Parsing;
+﻿using Calculations;
 using System;
 
 namespace Demo
@@ -9,18 +7,9 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World pt 2!");
-            //var left = new ConstantNode(7);
-            //var right = new ConstantNode(3);
-            //var operatorNode = new BinaryExpressionNode(left, BinaryOperator.Add, right);
-
             try
             {
-                var test1 = new Lexer("1+");
-                var parser = new Parser(test1);
-                var tree = parser.ParseBinaryExpression(0);
-                Console.WriteLine(tree.Evaluate());
-                
+                Console.WriteLine(Calculator.Calculate("1.5 + .5"));
             }
             catch (Exception e)
             {
